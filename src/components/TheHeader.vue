@@ -10,10 +10,12 @@ defineProps({
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
-    <h3>
+    <h3 v-if="msg.includes('RUT')">
       Genera una lista con 10 ruts aleatorios
     </h3>
-    <span class="text-xs">by PC</span>
+    <h3 v-else>
+      Genera una lista con 10 correos aleatorios
+    </h3>
   </div>
 </template>
 

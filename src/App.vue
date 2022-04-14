@@ -1,24 +1,42 @@
 <script setup>
-import TheHeader from './components/TheHeader.vue'
-import TheContent from './components/TheContent.vue'
+import TheHeader from "./components/TheHeader.vue";
+import RutGenerator from "./components/RutGenerator.vue";
+import EmailGenerator from "./components/EmailGenerator.vue";
 </script>
 
 <template>
   <header>
-    <img alt="RUT Random logo" class="logo" src="./assets/identity.png" width="125" height="125" />
+    <img
+      alt="RUT Random logo"
+      class="logo"
+      src="./assets/identity.png"
+      width="125"
+      height="125"
+    />
 
     <div class="wrapper">
       <TheHeader msg="RUT Random" />
+      <RutGenerator />
     </div>
   </header>
+  <header>
+    <img
+      alt="Correo Random logo"
+      class="logo"
+      src="./assets/email.png"
+      width="125"
+      height="125"
+    />
 
-  <main>
-    <TheContent />
-  </main>
+    <div class="wrapper">
+      <TheHeader msg="Correo Random" />
+      <EmailGenerator />
+    </div>
+  </header>
 </template>
 
 <style>
-@import './assets/base.css';
+@import "./assets/base.css";
 
 #app {
   max-width: 1280px;
@@ -29,6 +47,7 @@ import TheContent from './components/TheContent.vue'
 }
 
 header {
+    margin-bottom: 3rem;
   line-height: 1.5;
 }
 
